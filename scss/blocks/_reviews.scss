@@ -1,0 +1,170 @@
+.reviews {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-image: url("../img/about-bg-left.svg"),
+    url("../../img/about-bg-right.svg");
+  background-repeat: no-repeat;
+  background-size: 147px 100px, 200px 200px;
+  background-position: calc(50% - 650px) top, calc(50% + 600px) 640px;
+}
+
+.reviews__heading {
+  margin: 0;
+  margin-bottom: 56px;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.reviews__heading-highlight {
+  color: #79C8C7;
+}
+
+.reviews__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__item {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  background-image: url("../../img/quote-img.svg");
+  background-repeat: no-repeat;
+  background-size: 67px 56px;
+  background-position: center top;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &::after {
+    border: 2px solid #C4FFFE;
+    content: "";
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  &--kady::after {
+    background-image: url("../img/kady-baker.jpg");
+  }
+
+  &--aiysha::after {
+    background-image: url("../img/aiysha-reese.jpg");
+  }
+
+  &--arthur::after {
+    background-image: url("../img/arthur-clarke.jpg");
+  }
+}
+
+.reviews__item-quote {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.reviews__item-user {
+  margin: 0;
+  margin-bottom: 2px;
+  color: #79C8C7;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.reviews__item-career {
+  margin: 0;
+  margin-bottom: 32px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+
+@include breakpoint-down (1000) {
+  .reviews {
+    background-position: top left, right bottom -100px;
+  }
+
+  .reviews__heading {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include breakpoint-down (768) {
+  .reviews {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .reviews__container {
+    padding-right: 98px;
+    padding-left: 98px;
+  }
+
+  .reviews__heading {
+    margin-bottom: 48px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .reviews__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__item {
+    max-width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 48px;
+    }
+  }
+}
+
+@include breakpoint-down (500) {
+  .reviews {
+    padding-top: 140px;
+    padding-bottom: 164px;
+  }
+
+  .reviews__container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .reviews__heading {
+    display: block;
+  }
+
+  .reviews__heading-break {
+    display: none;
+  }
+}
+
+
+@include retina-bg {
+  .reviews__item {
+    &--kady::after {
+      background-image: url("../img/kady-baker@2x.jpg");
+    }
+
+    &--aiysha::after {
+      background-image: url("../img/aiysha-reese@2x.jpg");
+    }
+
+    &--arthur::after {
+      background-image: url("../img/arthur-clarke@2x.jpg");
+    }
+  }
+}
