@@ -427,6 +427,14 @@ img {
   margin-right: auto;
 }
 
+.button {
+  padding: 10px 32px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .site-header {
   padding-top: 75px;
   padding-bottom: 75px;
@@ -573,12 +581,7 @@ img {
 }
 
 .sitenav__contact-link {
-  padding: 10px 32px;
   border: 2px solid #FFFFFF;
-  border-radius: 24px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
   color: #fff;
   text-decoration: none;
 }
@@ -1108,6 +1111,103 @@ img {
   }
   .reviews__item--arthur::after {
     background-image: url("../img/arthur-clarke@2x.jpg");
+  }
+}
+
+.cta {
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background-color: #F67E7E;
+  background-image: url("../../img/cta-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 244px;
+  background-position: calc(50% - 600px) 60px;
+}
+
+.cta__container {
+  max-width: 917px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cta__question {
+  margin: 0;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #012F34;
+}
+
+.cta__button {
+  border: 2px solid #012F34;
+  color: #012F34;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cta__button:hover {
+  background-color: #012F34;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+  .cta {
+    background-position: -80px 70px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cta {
+    background-position: left 80px;
+  }
+  .cta__container {
+    padding-right: 98px;
+    padding-left: 98px;
+  }
+  .cta__question {
+    font-size: 32px;
+    line-height: 32px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .cta {
+    background-position: left 135px;
+  }
+  .cta__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cta__question {
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cta {
+    background-position: left 170px;
+  }
+  .cta__container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .cta__question {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
