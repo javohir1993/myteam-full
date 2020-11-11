@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Welcome to MyTeam web site!!!</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="container site-header__container">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-img" src="img/logo-myteam.svg" alt="My Team website logo" width="160" height="40">
+      </a>
+
+      <nav class="site-header__sitenav sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="index.html">home</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="about.html">about</a>
+          </li>
+        </ul>
+        <a class="sitenav__contact-link" href="contact.html">contact us</a>
+      </nav>
+
+      <button class="site-header__button" type="button" aria-label="Toggler sitenav"></button>
+      <div class="site-header__background"></div>
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+
+
+  </main>
+
+
+
+  <script>
+
+    var elSiteheader = document.querySelector('.site-header');
+    var elButton = document.querySelector('.site-header__button');
+
+    elButton.addEventListener('click', function () {
+      elSiteheader.classList.toggle('site-header--open');
+    });
+
+  </script>
+
+</body>
+</html>
