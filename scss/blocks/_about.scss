@@ -1,0 +1,165 @@
+.about {
+  padding-top: 200px;
+  padding-bottom: 140px;
+  background-color: #012F34;
+  background-image: url("../img/about-bg.png");
+  background-repeat: no-repeat;
+  background-size: 200px 244px;
+  background-position: calc(50% + 700px) bottom;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__heading {
+  position: relative;
+  z-index: 1;
+  max-width: 445px;
+  margin: 0;
+  font-size: 48px;
+  line-height: 48px;
+  margin-right: 145px;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: -58px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #F67E7E;
+  }
+}
+
+.about__list {
+  @include reset-list;
+}
+
+.about__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    width: 72px;
+    height: 72px;
+    margin-right: 23px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &--experience::before {
+    background-image: url("../img/about-experience.svg");
+  }
+
+  &--easily::before {
+    background-image: url("../img/about-easily.svg");
+  }
+
+  &--productivity::before {
+    background-image: url("../img/about-productivity.svg");
+  }
+}
+
+.about__item-heading {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #F67E7E;
+}
+
+.about__item-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+
+@include breakpoint-down (1200) {
+  .about {
+    background-position: left bottom;
+  }
+}
+
+@include breakpoint-down (1100) {
+  .about__heading {
+    margin-right: 45px;
+  }
+}
+
+@include breakpoint-down (900) {
+  .about {
+    background-position: right top;
+  }
+
+  .about__container {
+    flex-direction: column;
+    padding-right: 98px;
+    padding-left: 98px;
+  }
+  .about__heading {
+    margin-right: 0;
+    margin-bottom: 64px;
+  }
+}
+
+@include breakpoint-down (768) {
+  .about {
+    padding-top: 136px;
+    padding-bottom: 100px;
+    background-position: right -100px top;
+  }
+
+  .about__heading {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@include breakpoint-down (500) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+
+  .about__container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .about__heading {
+    max-width: 240px;
+  }
+
+  .about__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    &::before {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+
+@include retina-bg {
+  .about {
+    background-image: url("../img/about-bg@2x.png");
+  }
+}
