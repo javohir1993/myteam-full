@@ -1,8 +1,8 @@
 .reviews {
   padding-top: 140px;
   padding-bottom: 140px;
-  background-image: url("../img/about-bg-left.svg"),
-    url("../../img/about-bg-right.svg");
+  background-image: url("../img/reviews-bg-left.svg"),
+    url("../img/reviews-bg-right.svg");
   background-repeat: no-repeat;
   background-size: 147px 100px, 200px 200px;
   background-position: calc(50% - 650px) top, calc(50% + 600px) 640px;
@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 36px;
-  background-image: url("../../img/quote-img.svg");
+  background-image: url("../img/quote-img.svg");
   background-repeat: no-repeat;
   background-size: 67px 56px;
   background-position: center top;
@@ -136,11 +136,6 @@
   .reviews {
     padding-top: 140px;
     padding-bottom: 164px;
-  }
-
-  .reviews__container {
-    padding-right: 24px;
-    padding-left: 24px;
   }
 
   .reviews__heading {

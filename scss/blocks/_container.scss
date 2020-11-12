@@ -5,3 +5,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+
+@include breakpoint-down (400) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}

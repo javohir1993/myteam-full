@@ -427,6 +427,13 @@ img {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 400px) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
 .button {
   padding: 10px 32px;
   border-radius: 24px;
@@ -516,10 +523,6 @@ img {
 }
 
 @media only screen and (max-width: 375px) {
-  .container {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
   .site-header {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -904,10 +907,6 @@ img {
     padding-top: 100px;
     padding-bottom: 64px;
   }
-  .about__container {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
   .about__heading {
     max-width: 240px;
   }
@@ -939,7 +938,7 @@ img {
 .reviews {
   padding-top: 140px;
   padding-bottom: 140px;
-  background-image: url("../img/about-bg-left.svg"), url("../../img/about-bg-right.svg");
+  background-image: url("../img/reviews-bg-left.svg"), url("../img/reviews-bg-right.svg");
   background-repeat: no-repeat;
   background-size: 147px 100px, 200px 200px;
   background-position: calc(50% - 650px) top, calc(50% + 600px) 640px;
@@ -982,7 +981,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 36px;
-  background-image: url("../../img/quote-img.svg");
+  background-image: url("../img/quote-img.svg");
   background-repeat: no-repeat;
   background-size: 67px 56px;
   background-position: center top;
@@ -1090,10 +1089,6 @@ img {
     padding-top: 140px;
     padding-bottom: 164px;
   }
-  .reviews__container {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
   .reviews__heading {
     display: block;
   }
@@ -1200,14 +1195,118 @@ img {
   .cta {
     background-position: left 170px;
   }
-  .cta__container {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
   .cta__question {
     max-width: 100%;
     white-space: normal;
     text-align: center;
+  }
+}
+
+.about-intro {
+  padding-top: 45px;
+  padding-bottom: 120px;
+  background-image: url("../../img/about-intro-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% + 700px) bottom;
+}
+
+.about-intro__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-intro__heading {
+  max-width: 350px;
+  width: 100%;
+  margin: 0;
+  margin-right: 30px;
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.about-intro__text {
+  max-width: 730px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.about-intro__text::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  margin-bottom: 40px;
+  background-color: #F67E7E;
+}
+
+@media only screen and (max-width: 1250px) {
+  .about-intro {
+    background-position: right -100px bottom -80px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about-intro {
+    padding-top: 48px;
+    padding-bottom: 112px;
+    background-position: right -100px bottom;
+  }
+  .about-intro__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-intro__heading {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    line-height: 56px;
+    text-align: center;
+  }
+  .about-intro__text {
+    max-width: 457px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .about-intro__text::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .about-intro {
+    background-position: right -100px bottom -90px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .about-intro {
+    padding-top: 32px;
+    padding-bottom: 108px;
+  }
+  .about-intro__heading {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
