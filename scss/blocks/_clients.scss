@@ -1,0 +1,85 @@
+.clients {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #012F34;
+  background-image: url("../../img/clients-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% - 650px) top;
+}
+
+.clients__heading {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.clients__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@include breakpoint-down (1000) {
+  .clients {
+    padding-bottom: 100px;
+    background-position: left top;
+  }
+
+  .clients__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .clients__item {
+    margin-bottom: 40px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@include breakpoint-down (800) {
+  .clients {
+    padding-top: 100px;
+    background-position: left -100px;
+  }
+
+  .clients__heading {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .clients__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@include breakpoint-down (700) {
+  .clients__list {
+    flex-wrap: wrap;
+  }
+}
+
+@include breakpoint-down (500) {
+  .clients {
+    padding-top: 88px;
+    padding-bottom: 48px;
+    background-position: -120px -100px;
+  }
+
+  .clients__list {
+    flex-direction: column;
+  }
+
+  .clients__item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
