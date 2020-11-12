@@ -645,6 +645,32 @@ img {
           flex-grow: 1;
 }
 
+.main-content--contact {
+  background-image: url("../img/contact-bg-left.svg"), url("../img/contact-bg-right.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px, 200px 224px;
+  background-position: calc(50% - 750px) top, calc(50% + 750px) bottom;
+}
+
+@media only screen and (max-width: 1300px) {
+  .main-content--contact {
+    background-position: left -160px top, right -100px bottom;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-content--contact {
+    background-position: left -100px top, right -100px bottom;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-content--contact {
+    background-image: url("../../img/contact-bg-right.svg");
+    background-position: right -100px bottom -100px;
+  }
+}
+
 .intro {
   padding-top: 55px;
   padding-bottom: 250px;
@@ -1680,6 +1706,197 @@ img {
   }
   .clients__item:not(:last-child) {
     margin-right: 0;
+  }
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 120px;
+}
+
+.contact__info {
+  width: 50%;
+}
+
+.contact__info-title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.contact__info-text {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 32px;
+  line-height: 48px;
+  color: #F67E7E;
+}
+
+.contact__info-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.contact__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.contact__info-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.contact__info-item::before {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  content: "";
+  width: 72px;
+  height: 72px;
+  margin-right: 23px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left center;
+}
+
+.contact__info-item--talent::before {
+  background-image: url("../img/talent-network.png");
+}
+
+.contact__info-item--software::before {
+  background-image: url("../img/our-software.png");
+}
+
+.contact__info-item--innovation::before {
+  background-image: url("../img/innovation.png");
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 50%;
+  padding-left: 40px;
+}
+
+.contact__form-input {
+  width: 100%;
+  padding-left: 14px;
+  padding-bottom: 17px;
+  margin-bottom: 24px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  font-size: 15px;
+  line-height: 25px;
+  outline: none;
+  color: #fff;
+}
+
+.contact__form-input::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.contact__form-input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.contact__form-input::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.contact__form-input::placeholder {
+  opacity: 0.6;
+}
+
+.contact__form-input--textarea {
+  min-height: 84px;
+  padding-right: 14px;
+}
+
+.contact__form-button {
+  padding: 10px 32px;
+  border: 2px solid #FFFFFF;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  font-size: 18px;
+  line-height: 28px;
+  color: #004047;
+  outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 48px;
+    padding-bottom: 112px;
+  }
+  .contact__info {
+    max-width: 515px;
+    width: 100%;
+    margin-bottom: 64px;
+  }
+  .contact__info-title {
+    margin-bottom: 24px;
+    line-height: 56px;
+    text-align: center;
+  }
+  .contact__info-text {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .contact__form {
+    max-width: 540px;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact__container {
+    padding-top: 32px;
+    padding-bottom: 88px;
+  }
+  .contact__info-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .contact__info-item--talent::before {
+    background-image: url("../img/talent-network@2x.png");
+  }
+  .contact__info-item--software::before {
+    background-image: url("../img/our-software@2x.png");
+  }
+  .contact__info-item--innovation::before {
+    background-image: url("../img/innovation@2x.png");
   }
 }
 

@@ -8,6 +8,64 @@
 </head>
 <body>
 
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="container site-header__container">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-img" src="img/logo-myteam.svg" alt="My Team website logo" width="160" height="40">
+      </a>
+
+      <nav class="site-header__sitenav sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="index.html">home</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="about.html">about</a>
+          </li>
+        </ul>
+        <a class="button sitenav__contact-link" href="contact.html">contact us</a>
+      </nav>
+
+      <button class="site-header__button" type="button" aria-label="Toggler sitenav"></button>
+      <div class="site-header__background"></div>
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="main-content main-content--contact">
+
+    <div class="container contact__container">
+      <div class="contact__info">
+
+        <h1 class="contact__info-title">Contact</h1>
+        <h2 class="contact__info-text">Ask us about</h2>
+        <ul class="contact__info-list">
+          <li class="contact__info-item contact__info-item--talent">The quality of our talent network</li>
+          <li class="contact__info-item contact__info-item--software">Usage & implementation of our software</li>
+          <li class="contact__info-item contact__info-item--innovation">How we help drive innovation</li>
+        </ul>
+
+      </div><!-- contact__info -->
+
+      <form  class="contact__form" action="https://echo.htmlacademy.ru" method="POST">
+
+        <input class="contact__form-input" type="text" name="name" placeholder="Name" aria-label="Your name" required>
+        <input class="contact__form-input" type="email" name="email" placeholder="Email Address" aria-label="Your email address" required>
+        <input class="contact__form-input" type="text" name="company_name" placeholder="Company Name" aria-label="Your company name" required>
+        <input class="contact__form-input" type="text" name="title" placeholder="Title" aria-label="Your title" required>
+        <textarea class="contact__form-input contact__form-input--textarea" name="textarea" placeholder="Message" aria-label="Message" required></textarea>
+
+        <button class="contact__form-button" type="submit">submit</button>
+
+      </form><!-- contact__form -->
+    </div>
+
+  </main>
+
 
 
 </body>

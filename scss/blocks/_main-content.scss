@@ -1,3 +1,37 @@
 .main-content {
   flex-grow: 1;
+
+  &--contact {
+    background-image: url("../img/contact-bg-left.svg"),
+      url("../img/contact-bg-right.svg");
+    background-repeat: no-repeat;
+    background-size: 200px 200px, 200px 224px;
+    background-position: calc(50% - 750px) top, calc(50% + 750px) bottom;
+  }
+}
+
+
+@include breakpoint-down (1300) {
+  .main-content {
+    &--contact {
+      background-position: left -160px top, right -100px bottom;
+    }
+  }
+}
+
+@include breakpoint-down (800) {
+  .main-content {
+    &--contact {
+      background-position: left -100px top, right -100px bottom;
+    }
+  }
+}
+
+@include breakpoint-down (500) {
+  .main-content {
+    &--contact {
+      background-image: url("../../img/contact-bg-right.svg");
+      background-position: right -100px bottom -100px;
+    }
+  }
 }
