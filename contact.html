@@ -117,6 +117,16 @@
   </footer>
 
 
+  <script>
+
+    var elSiteheader = document.querySelector('.site-header');
+    var elButton = document.querySelector('.site-header__button');
+
+    elButton.addEventListener('click', function () {
+      elSiteheader.classList.toggle('site-header--open');
+    });
+
+  </script>
 
 </body>
 </html>
